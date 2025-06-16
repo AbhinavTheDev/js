@@ -24,15 +24,15 @@ const Navbar = () => {
       }`}
     >
       <div className="container flex items-center justify-between h-16 px-4 md:px-6">
-        <Link to="/" className="flex items-center">
+        <Link to="/js/" className="flex items-center">
           <span className="font-bold text-lg">JSPlay</span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">Home</Link>
-          <Link to="/templates" className="text-sm font-medium hover:text-primary transition-colors">Templates</Link>
-          <Link to="/components" className="text-sm font-medium hover:text-primary transition-colors">Components</Link>
+          <Link to="/js/" className="text-sm font-medium hover:text-primary transition-colors">Home</Link>
+          <Link to="/js/templates" className="text-sm font-medium hover:text-primary transition-colors">Templates</Link>
+          <Link to="/js/components" className="text-sm font-medium hover:text-primary transition-colors">Components</Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -52,21 +52,21 @@ const Navbar = () => {
       {isOpen && (
         <nav className="flex flex-col p-4 bg-background/95 backdrop-blur-md border-t md:hidden animate-fade-in">
           <Link 
-            to="/" 
+            to="/js/" 
             className="px-4 py-3 text-sm font-medium hover:bg-accent rounded-md"
             onClick={() => setIsOpen(false)}
           >
             Home
           </Link>
           <Link 
-            to="/templates" 
+            to="/js/templates" 
             className="px-4 py-3 text-sm font-medium hover:bg-accent rounded-md"
             onClick={() => setIsOpen(false)}
           >
             Templates
           </Link>
           <Link 
-            to="/components" 
+            to="/js/components" 
             className="px-4 py-3 text-sm font-medium hover:bg-accent rounded-md"
             onClick={() => setIsOpen(false)}
           >

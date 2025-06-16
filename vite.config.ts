@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+
+// https://vitejs.dev/config/
 export default defineConfig({
-  base: "/js/",
-  plugins: [
-    tailwindcss(),
-  ],
+  plugins: [react(), tailwindcss()],
+  base: '/js/', // Set this to match your deployment subdirectory
 })

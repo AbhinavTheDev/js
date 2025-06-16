@@ -21,6 +21,8 @@ const TitleUpdater = () => {
       document.title = "JS Playground - Build, Test, and Share JavaScript Code";
     } else if (pathname === "/components") {
       document.title = "JS Playground - UI Components";
+    } else if (pathname === "/templates") {
+      document.title = "JS Playground - Templates";
     } else {
       document.title = `JS Playground - ${pathname.slice(1).charAt(0).toUpperCase() + pathname.slice(2)}`;
     }
@@ -34,14 +36,20 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/js">
         <TitleUpdater />
         <Routes>
+          {/* Base routes */}
           <Route path="/" element={<Index />} />
           <Route path="/templates" element={<Templates />} />
           <Route path="/components" element={<Components />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          {/* <Route path="*" element={<NotFound />} /> */}
+          
+          {/* Remove these redirect routes as they're causing the issue */}
+          {/* <Route path="/js" element={<Navigate to="/" replace />} />
+          <Route path="/js/*" element={<Navigate to="/" replace />} /> */}
+          
+          {/* Catch-all for 404s - create a NotFound component or redirect to home */}
+          <Route path="*" element={<Index />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
