@@ -58,7 +58,7 @@ const IndexContent = () => {
                 A hub of html, css, js based components and projects for your framework-less projects.
                 </p>
               <div className="flex flex-row gap-4 pt-4">
-                <Link to="/js/templates">
+                <Link to="/templates">
                   <Button size="lg" className="font-medium">
                     Start Creating
                   </Button>
@@ -132,7 +132,7 @@ const IndexContent = () => {
                     From calculators to todo lists, build practical web tools
                     with our interactive templates.
                   </p>
-                  <Link to="/js/templates">
+                  <Link to="/templates">
                     <Button className="w-full">Explore Templates</Button>
                   </Link>
                 </div>
@@ -147,7 +147,7 @@ const IndexContent = () => {
                     Enhance your interfaces with our collection of customizable,
                     responsive UI components.
                   </p>
-                  <Link to="/js/components">
+                  <Link to="/components">
                     <Button className="w-full">View Components</Button>
                   </Link>
                 </div>
@@ -168,7 +168,7 @@ const IndexContent = () => {
               Join now to create amazing JavaScript projects with our powerful
               toolset
             </p>
-            <Link to="/js/templates">
+            <Link to="/templates">
               <Button size="lg" className="font-medium">
                 Get Started for Free
               </Button>
